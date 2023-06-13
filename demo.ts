@@ -63,7 +63,7 @@ const testDynamoDB = async (version: string) => {
   const libPath = join(__dirname, ".dynamodb", version, "DynamoDBLocal_lib")
   const jarPath = join(__dirname, ".dynamodb", version, "DynamoDBLocal.jar")
   const proc = spawn("java", [`-Djava.library.path=${libPath}`, `-jar`, `${jarPath}`, `-inMemory`], { detached: true, stdio: 'inherit' });
-  await wait(2000)
+  await wait(5000)
 
   // Create client
   const client1 = new DynamoDBClient({
@@ -111,7 +111,7 @@ const testDynamoDB = async (version: string) => {
   // Kill dynamodb
   console.log('Stopping dynamodb...')
   proc.kill()
-  await wait(500)
+  await wait(1000)
 }
 
 const wait = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms))
