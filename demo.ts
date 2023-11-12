@@ -70,8 +70,8 @@ const testDynamoDB = async (version: string) => {
     region: "localhost",
     endpoint: "http://localhost:8000",
     credentials: {
-      accessKeyId: "access-key-1",
-      secretAccessKey: "secret-1",
+      accessKeyId: "accessKey1",
+      secretAccessKey: "secret1",
     },
   })
 
