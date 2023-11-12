@@ -97,8 +97,8 @@ const testDynamoDB = async (version: string) => {
       // NB: as we are using a different access key, we _should_ not be able to read the tables
       // This is useful for things like test isolation etc.
       // See: https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/DynamoDBLocal.UsageNotes.html
-      accessKeyId: "access-key-2",
-      secretAccessKey: "secret-2",
+      accessKeyId: "accessKey2",
+      secretAccessKey: "secret2",
     },
   })
   const res = await client2.send(new ListTablesCommand({}))
