@@ -1,4 +1,6 @@
-# dynamodb-local-shareddb-bug
+# dynamodb-local-shareddb-mre
+
+_This repository is now archived because the bug has been fixed._
 
 Previously, when not using `-sharedDb` and when using `-inMemory`, DynamoDB Local would keep databases separate. This was really useful for having things like isolation in tests.
 
